@@ -9,8 +9,6 @@
 using namespace std;
 
 class Bucket {
-  const int CAPACITY = 2;
-
   list<Employee> items;
   int modulus;
 

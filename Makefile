@@ -4,10 +4,10 @@ SRC_FILES := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC_FILES))
 
 main: $(OBJ_FILES)
-	g++ -g -o $@ $^
+	g++ -std=c++11 -g -o $@ $^
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	g++ -g -c -o $@ $<
+	g++ -std=c++11 -g -c -o $@ $<
 
 clean:
 	rm main; rm $(OBJ_DIR)/*.o; rm Employee.csv; rm EmployeeIndex

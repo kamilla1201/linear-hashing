@@ -1,5 +1,5 @@
 core
-obj/
+obj/*
 *.swp
 .gdb_history
 main
