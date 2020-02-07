@@ -16,15 +16,20 @@ class Hash {
 
 public:
   Hash(int V);
-  void insertItem(int x);
-  void deleteItem(int key);
+  Hash(string indexFileName);
+  void insertItem(Employee e);
+  //void deleteItem(int key);
 
-  int hashFunction(int x);
-  int hashFunction(int x, int mod);
+  int hashFunction(Employee e);
+  int hashFunction(string id);
+  int hashFunction(string id, int mod);
+  int hashFunction(Employee e, int mod);
   void displayHash();
+  void writeIndexFile();
   double getAvgBucketSize();
   void addBucket();
   void reMap(int bucketInd);
+  Employee lookup(string id);
   //inline
   //size_t getCapacity () { return numBuckets * 4096; }
 };

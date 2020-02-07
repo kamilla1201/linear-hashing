@@ -4,27 +4,28 @@
 #include<iostream>
 #include <list>
 #include <vector>
+#include "Employee.h"
 
 using namespace std;
 
 class Bucket {
   const int CAPACITY = 2;
 
-  list<int> items;
+  list<Employee> items;
   int modulus;
 
   public:
   Bucket();
   Bucket(int modulus);
   void setModulus(int m);
-  void addItem(int i);
+  void addItem(Employee i);
   size_t getSize();
   int getModulus() { return modulus; }
-  list<int> getItems() {
+  list<Employee> getItems() {
     return items;
   }
 
-  list<int>* getItemsRef() {
+  list<Employee>* getItemsRef() {
     // cout << "bucket " << (void *) &items << endl;
     return &items;
   }

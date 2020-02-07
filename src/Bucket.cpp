@@ -7,27 +7,27 @@
 using namespace std;
 
 Bucket::Bucket() {
-  items = list<int>();
+  items = list<Employee>();
   modulus = 2;
 };
 
 Bucket::Bucket(int m) {
-  items = list<int>();
+  items = list<Employee>();
   modulus = m;
 };
 
 void Bucket::setModulus(int m) {
-  this->modulus = m;
+  modulus = m;
 }
 
-void Bucket::addItem(int i) {
+void Bucket::addItem(Employee i) {
   items.push_back(i);
 }
 
 size_t Bucket::getSize() {
   size_t size = 0;
-  for (int i : items) {
-    size += 1;
+  for (Employee i : items) {
+    size += i.getSize();
   }
   return size;
 }

@@ -7,23 +7,23 @@
 using namespace std;
 
 class Employee {
-  string id;
-  string name;
   string bio;
+  string id;
   string managerId;
+  string name;
 
 public:
   Employee(string id, string name, string bio, string managerId)
     : id(id),
+      managerId(managerId),
       name(name),
-      bio(bio),
-      managerId()
+      bio(bio)
   {}
 
   size_t getSize();
   string getId() { return id; }
   string getName() { return name; }
-  string getbBio() { return bio; }
+  string getBio() { return bio; }
   string getManagerId() { return managerId; }
 };
 

@@ -3,3 +3,7 @@ obj/
 *.swp
 .gdb_history
 main
+core
+Employee.csv
+EmployeeIndex
+tags

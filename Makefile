@@ -10,4 +10,4 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	g++ -g -c -o $@ $<
 
 clean:
-	rm main && rm $(OBJ_DIR)/*.o
+	rm main; rm $(OBJ_DIR)/*.o; rm Employee.csv; rm EmployeeIndex
